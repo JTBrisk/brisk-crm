@@ -29,7 +29,7 @@
 <span class="font-body-md text-body-md">Dashboard</span>
 </a>
 <!-- Active State: Contacts -->
-<a class="bg-surface-container-lowest text-primary font-bold rounded-l-full ml-4 py-3 px-6 flex items-center gap-md transition-all duration-200" href="./contacts.html">
+<a class="bg-surface-container-lowest text-primary font-bold _rounded-l-full ml-4 py-3 px-6 flex items-center gap-md transition-all duration-200" href="./contacts.html">
 <span class="material-symbols-outlined" data-icon="contacts" style='font-variation-settings: "FILL" 1;'>contacts</span>
 <span class="font-body-md text-body-md">Contacts</span>
 </a>
@@ -76,7 +76,7 @@
 </button>
 </div>
 <div class="h-8 w-[1px] bg-outline-variant mx-sm"></div>
-<div class="flex items-center gap-sm cursor-pointer hover:bg-surface-container-low p-1 rounded-lg transition-colors">
+<div class="flex items-center gap-sm cursor-pointer hover:bg-surface-container-low p-1 _rounded-lg transition-colors">
 <img alt="User avatar" class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0bnx3-yhkjuI037C7lK-7G3RXfv_esZj7ccLL861hoflJm5bmd2GFZTXUAXSYacYFjYd8ugb-cH6wQ-qo_P-WuulJ9_xH7yNdSopz0BsN9QAauORq6S2YJj1DJKuCNf3SUKxMhZjNwhawFYVIquTYuWEtCj1IPBw2JkDQEm5nuiR1TWNMCyKgTyhYV4RvnU_0-Zw0QeqTWRB4htU2EWSE2WHPw5sI-Y00ZK44gSdGR9IDI7hBpGqHu3UxSqWSWHlpI5CHiHgxaDb2"/>
 <div class="hidden lg:block text-left">
 <p class="font-label-sm text-label-sm text-on-surface leading-none">Alex Rivera</p>
@@ -87,7 +87,7 @@
 </header>
 <!-- Main Content Area -->
 <main class="ml-sidebar_width p-lg min-h-screen">
-<div class="max-w-7xl mx-auto space-y-lg">
+<div class="_max-w-7xl mx-auto space-y-lg">
 <!-- Page Header Section -->
 <section class="flex flex-col md:flex-row md:items-end justify-between gap-md">
 <div>
@@ -100,25 +100,25 @@
 <p class="font-body-md text-body-md text-outline">Manage and organize your customer relationships efficiently.</p>
 </div>
 <div class="flex items-center gap-sm">
-<button class="flex items-center gap-sm px-4 py-2 border border-outline-variant bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<button class="flex items-center gap-sm px-4 py-2 border border-outline-variant bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm _rounded-lg hover:bg-surface-container-low transition-colors">
 <span class="material-symbols-outlined text-[20px]" data-icon="file_download">file_download</span>
                         Export
                     </button>
-<button class="flex items-center gap-sm px-5 py-2.5 bg-primary text-on-primary font-label-sm text-label-sm rounded-lg shadow-sm hover:opacity-90 transition-opacity">
+<button class="flex items-center gap-sm px-5 py-2.5 bg-primary_ text-on-primary font-label-sm text-label-sm _rounded-lg shadow-sm hover:opacity-90 transition-opacity" style="background-color: #1a73e8;">
 <span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
                         Add Contact
                     </button>
 </div>
 </section>
 <!-- Stats Bento Grid (High-end UI pattern) -->
-<section class="grid grid-cols-1 md:grid-cols-4 gap-md">
+<!-- <section class="grid grid-cols-1 md:grid-cols-4 gap-md">
 <div class="bg-surface-container-lowest border border-outline-variant p-md _rounded-xl">
 <p class="font-label-sm text-label-sm text-outline mb-xs">Total Contacts</p>
 <div class="flex items-end justify-between">
 <span class="text-2xl font-bold text-on-surface">1,284</span>
 <span class="text-xs text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-semibold">+12%</span>
 </div>
-</div>
+</div> -->
 <!-- <div class="bg-surface-container-lowest border border-outline-variant p-md _rounded-xl">
 <p class="font-label-sm text-label-sm text-outline mb-xs">Active Leads</p>
 <div class="flex items-end justify-between">
@@ -142,7 +142,7 @@
 <span class="material-symbols-outlined text-outline" data-icon="trending_up">trending_up</span>
 </div>
 </div> -->
-</section>
+<!-- </section> -->
 <!-- Contacts Table Container -->
 <div class="bg-surface-container-lowest border border-outline-variant _rounded-xl overflow-hidden">
 <!-- Filters Bar -->
@@ -392,7 +392,16 @@
 </div>
 </div>
 
+<div class="bg-surface-container-lowest border border-outline-variant p-md _rounded-xl lg:col-span-1">
+<p class="font-label-sm text-label-sm text-outline mb-xs">Total Contacts</p>
+<div class="flex items-end justify-between">
+<span class="text-2xl font-bold text-on-surface">1,284</span>
+<span class="text-xs text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-semibold">+12%</span>
+</div>
+</div>
 </section>
+
+
 </div>
 </main>
 <!-- Contextual FAB (Hidden as per requirement for Contacts page, but scaffolded) -->
