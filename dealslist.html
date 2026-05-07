@@ -78,11 +78,11 @@
                       "sm": "8px"
               },
               "fontFamily": {
-                      "headline-md": ["Inter"],
-                      "label-sm": ["Inter"],
-                      "body-md": ["Inter"],
-                      "display-lg": ["Inter"],
-                      "table-header": ["Inter"]
+                      "headline-md": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+                      "label-sm": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+                      "body-md": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+                      "display-lg": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+                      "table-header": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
               },
               "fontSize": {
                       "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
@@ -96,7 +96,7 @@
         }
     </script>
 <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -165,20 +165,20 @@
 <!-- Header Section -->
 <div class="flex items-end justify-between">
 <div>
-<h2 class="font-display-lg text-display-lg text-on-background tracking-tight">Deals</h2>
+<h2 class="font-display-lg text-display-lg text-on-background tracking-tight" style="font-weight: 400; color: #1c71d1;">Deals</h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Manage and track your active sales pipeline</p>
 </div>
 <div class="flex items-center gap-sm">
 <!-- View Toggle -->
 <div class="bg-surface-container-high _rounded-lg p-1 flex">
-<button class="px-4 py-1.5 rounded-md font-label-sm text-label-sm flex items-center gap-xs bg-surface-container-lowest text-primary shadow-sm">
+<div class="px-4 py-1.5 rounded-md font-label-sm text-label-sm flex items-center gap-xs bg-surface-container-lowest text-primary shadow-sm">
 <span class="material-symbols-outlined text-[18px]" data-icon="list">list</span>
                             List
-                        </button>
-<button class="px-4 py-1.5 rounded-md font-label-sm text-label-sm flex items-center gap-xs text-on-surface-variant hover:bg-surface-container transition-colors">
+                        </div>
+<a class="px-4 py-1.5 rounded-md font-label-sm text-label-sm flex items-center gap-xs text-on-surface-variant hover:bg-surface-container transition-colors" href="./deals.html">
 <span class="material-symbols-outlined text-[18px]" data-icon="grid_view">grid_view</span>
                             Board
-                        </button>
+                        </a>
 </div>
 <!-- Action Buttons -->
 <button class="text-on-primary px-lg py-2 _rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity flex items-center gap-xs" style="background-color: #1a73e8;">
