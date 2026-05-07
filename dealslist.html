@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deals - Brisk CRM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#bfc6da",
+                      "outline": "#74777f",
+                      "error-container": "#ffdad6",
+                      "primary": "#294065",
+                      "surface-container-low": "#f4f3f6",
+                      "on-background": "#1b1c1e",
+                      "surface-container": "#efedf0",
+                      "secondary": "#565e70",
+                      "on-secondary-fixed": "#141c2a",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#495f86",
+                      "on-primary-fixed-variant": "#31476d",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#ecc782",
+                      "on-primary-fixed": "#001b3e",
+                      "primary-fixed": "#d6e3ff",
+                      "tertiary-container": "#6d5219",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#dbe2f7",
+                      "outline-variant": "#c4c6cf",
+                      "surface-dim": "#dbd9dd",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#faf9fc",
+                      "surface-container-high": "#e9e7eb",
+                      "surface-variant": "#e3e2e5",
+                      "primary-fixed-dim": "#b1c7f4",
+                      "on-secondary-fixed-variant": "#3f4757",
+                      "tertiary-fixed": "#ffdea5",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#5c4309",
+                      "inverse-primary": "#b1c7f4",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2f3033",
+                      "on-surface-variant": "#44474e",
+                      "on-primary-container": "#b7cdfb",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#1b1c1e",
+                      "primary-container": "#41577e",
+                      "tertiary-fixed-dim": "#e6c17d",
+                      "surface-container-highest": "#e3e2e5",
+                      "inverse-on-surface": "#f2f0f3",
+                      "tertiary": "#533b02",
+                      "surface": "#faf9fc",
+                      "on-secondary-container": "#5c6476",
+                      "background": "#faf9fc",
+                      "secondary-container": "#dbe2f7",
+                      "on-tertiary-fixed": "#261900"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "xs": "4px",
+                      "sidebar_width": "240px",
+                      "base": "4px",
+                      "xl": "32px",
+                      "lg": "24px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "table-header": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "display-lg": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "table-header": ["13px", {"lineHeight": "18px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- SideNavBar Shell -->
+<aside class="docked fixed left-0 top-0 h-full w-sidebar_width dark:bg-surface-dim flex flex-col h-full py-lg z-50" style="background-color: #41577E;">
+<div class="px-lg mb-xl">
+<h1 class="font-headline-md text-headline-md text-white">Brisk CRM</h1>
+<p class="font-label-sm text-label-sm opacity-70 text-white">Enterprise Edition</p>
+</div>
+<nav class="flex-grow">
+<ul class="flex flex-col">
+<!-- Dashboard -->
+<li class="cursor-pointer transition-all duration-200 hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors text-white/80">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</li>
+<!-- Contacts -->
+<li class="cursor-pointer transition-all duration-200 hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors text-white/80">
+<span class="material-symbols-outlined" data-icon="contacts">contacts</span>
+<span class="font-body-md text-body-md">Contacts</span>
+</li>
+<!-- Deals (ACTIVE) -->
+<li class="cursor-pointer transition-all duration-200 bg-surface-container-lowest text-primary font-bold rounded-l-full ml-4 py-3 px-6 flex items-center gap-md">
+<span class="material-symbols-outlined" data-icon="handshake" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<span class="font-body-md text-body-md">Deals</span>
+</li>
+<!-- Tasks -->
+<li class="cursor-pointer transition-all duration-200 hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors text-white/80">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="font-body-md text-body-md">Tasks</span>
+</li>
+<!-- Settings -->
+<li class="cursor-pointer transition-all duration-200 hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors text-white/80">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</li>
+</ul>
+</nav>
+<div class="mt-auto flex flex-col pt-lg border-t border-white/10">
+<li class="cursor-pointer transition-all duration-200 hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors list-none text-white/80">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-body-md text-body-md">Help</span>
+</li>
+<li class="cursor-pointer transition-all duration-200 hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors list-none text-white/80">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md text-body-md">Logout</span>
+</li>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-sidebar_width flex flex-col min-h-screen">
+<!-- TopAppBar Shell -->
+<header class="docked full-width top-0 sticky z-40 bg-surface-container-lowest dark:bg-surface border-b border-outline-variant flex justify-between items-center h-16 px-md">
+<div class="flex items-center gap-md">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 font-body-md text-body-md focus:ring-2 focus:ring-primary" placeholder="Search deals..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant" data-icon="apps">apps</button>
+<div class="h-8 w-8 rounded-full overflow-hidden ml-sm border border-outline-variant">
+<img alt="User avatar" class="h-full w-full object-cover" data-alt="A professional headshot of a corporate executive with a friendly smile, clean-cut appearance, and neutral business attire. The lighting is soft and studio-quality, creating a crisp and reliable persona suitable for an enterprise CRM software interface. The background is a soft, out-of-focus office environment with neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMvttrL6_27WiEXAIC5LYjvuuiWTS4cOs0xOnscgV7gAr5XfiN3dK_6-trWBMccjAFXbKQ93xzWLOB8b6JKsWOQMQwQEc1ng4jj5ikS06GSsfs8hJPWj8RLkO9dSsVcGp9gDQajxz4GPkmOXyLndealXjsRCOWwhDNWgnoRKAHdyAWwfMgRMWcEPy8QmYvK_SK1i5mWrZ6MP94kR9NRMkQYgZ0HuPjpX6yvAtTlq3fTsknhKd1bfr74HzlL9EuVDFfztTdIWFhWGuE"/>
+</div>
+</div>
+</header>
+<!-- Workspace Canvas -->
+<div class="p-lg space-y-lg flex-grow">
+<!-- Header Section -->
+<div class="flex items-end justify-between">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-background tracking-tight">Deals</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Manage and track your active sales pipeline</p>
+</div>
+<div class="flex items-center gap-sm">
+<!-- View Toggle -->
+<div class="bg-surface-container-high rounded-lg p-1 flex">
+<button class="px-4 py-1.5 rounded-md font-label-sm text-label-sm flex items-center gap-xs bg-surface-container-lowest text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="list">list</span>
+                            List
+                        </button>
+<button class="px-4 py-1.5 rounded-md font-label-sm text-label-sm flex items-center gap-xs text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="grid_view">grid_view</span>
+                            Board
+                        </button>
+</div>
+<!-- Action Buttons -->
+<button class="text-on-primary px-lg py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity flex items-center gap-xs" style="background-color: #1a73e8;">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                        Add Deal
+                    </button>
+</div>
+</div>
+<!-- Filters & Search Bar (CRM Context) -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-md rounded-xl border border-outline-variant">
+<div class="flex gap-md">
+<button class="flex items-center gap-xs font-label-sm text-label-sm border border-outline-variant px-3 py-1.5 rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
+                        Filters
+                    </button>
+<button class="flex items-center gap-xs font-label-sm text-label-sm border border-outline-variant px-3 py-1.5 rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="sort">sort</span>
+                        Sort
+                    </button>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">
+                    Showing 14 active deals
+                </div>
+</div>
+<!-- Table Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low border-b border-outline-variant">
+<tr>
+<th class="py-3 px-lg font-table-header text-table-header text-on-surface uppercase tracking-wider">Deal</th>
+<th class="py-3 px-lg font-table-header text-table-header text-on-surface uppercase tracking-wider">Last Activity</th>
+<th class="py-3 px-lg font-table-header text-table-header text-on-surface uppercase tracking-wider">Status</th>
+<th class="py-3 px-lg font-table-header text-table-header text-on-surface uppercase tracking-wider text-right">Value</th>
+<th class="py-3 px-lg font-table-header text-table-header text-on-surface uppercase tracking-wider">Close Date</th>
+<th class="py-3 px-lg font-table-header text-table-header text-on-surface uppercase tracking-wider w-10"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Acme Corp Expansion -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-lg">
+<div class="flex items-center gap-md">
+<div class="w-8 h-8 rounded bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center font-bold text-xs">AC</div>
+<span class="font-body-md text-body-md font-semibold text-primary">Acme Corp Expansion</span>
+</div>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">4d ago</td>
+<td class="py-4 px-lg">
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-tighter">New</span>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-right font-medium text-on-background">$45,000</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">Jun 15, 2024</td>
+<td class="py-4 px-lg text-right">
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<!-- CRM Integration Project -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-lg">
+<div class="flex items-center gap-md">
+<div class="w-8 h-8 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center font-bold text-xs">CR</div>
+<span class="font-body-md text-body-md font-semibold text-primary">CRM Integration Project</span>
+</div>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">May 12</td>
+<td class="py-4 px-lg">
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant text-[11px] font-bold uppercase tracking-tighter">Contacted</span>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-right font-medium text-on-background">$12,500</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">Jul 30, 2024</td>
+<td class="py-4 px-lg text-right">
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<!-- Deal 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-lg">
+<div class="flex items-center gap-md">
+<div class="w-8 h-8 rounded bg-outline-variant text-on-surface-variant flex items-center justify-center font-bold text-xs">D1</div>
+<span class="font-body-md text-body-md font-semibold text-primary">Deal 1</span>
+</div>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">Mon 4th May</td>
+<td class="py-4 px-lg">
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-tighter">New</span>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-right font-medium text-on-background">$8,200</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">Aug 02, 2024</td>
+<td class="py-4 px-lg text-right">
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<!-- Deal 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-lg">
+<div class="flex items-center gap-md">
+<div class="w-8 h-8 rounded bg-outline-variant text-on-surface-variant flex items-center justify-center font-bold text-xs">D2</div>
+<span class="font-body-md text-body-md font-semibold text-primary">Deal 2</span>
+</div>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">Fri 1st May</td>
+<td class="py-4 px-lg">
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant text-[11px] font-bold uppercase tracking-tighter">Contacted</span>
+</td>
+<td class="py-4 px-lg font-body-md text-body-md text-right font-medium text-on-background">$21,000</td>
+<td class="py-4 px-lg font-body-md text-body-md text-on-surface-variant">Sep 14, 2024</td>
+<td class="py-4 px-lg text-right">
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Summary Card (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="bg-surface-container-low p-lg rounded-xl border border-outline-variant flex items-center gap-md">
+<div class="p-3 rounded-full bg-primary-fixed text-primary">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Total Pipeline Value</p>
+<p class="font-display-lg text-display-lg text-on-background">$86,700</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-lg rounded-xl border border-outline-variant flex items-center gap-md">
+<div class="p-3 rounded-full bg-tertiary-fixed text-tertiary">
+<span class="material-symbols-outlined" data-icon="timer">timer</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Avg. Deal Cycle</p>
+<p class="font-display-lg text-display-lg text-on-background">24 Days</p>
+</div>
+</div>
+<div class="relative overflow-hidden bg-primary-container text-on-primary-container p-lg rounded-xl flex items-center gap-md border border-primary">
+<div class="z-10">
+<p class="font-label-sm text-label-sm opacity-80">Conversion Rate</p>
+<p class="font-display-lg text-display-lg">68%</p>
+</div>
+<img class="absolute right-0 top-0 h-full w-1/2 object-cover opacity-20 pointer-events-none" data-alt="A subtle background abstract pattern with flowing lines and data-inspired curves that convey growth and momentum in a professional CRM setting." src="https://lh3.googleusercontent.com/aida/ADBb0ugykrvytRqrm9Dbs0PhXLm03XJY22vtwnneXESPD8QSJVCp0VDpt-XHmgDikked8tUtMp904M6HhL8pZ5EIJawJEGTv7sBhBDHrhksv4ma8lJS2s69QPJSdmNF4l8LnQBuhNNSTWOti9i6rHqgt_xsHIVrksH95tKka90_Q0R7iyeCeVdqEteTLIo_tOdyNkiWwVnZ0kwQUrx_1uLRcKRd6zE9mzasQOHfTb16vus-ZHn43UEaXIdIXzlUlNBV8iVLYen0Zn4CO9BU"/>
+</div>
+</div>
+</div>
+</main>
+</body></html>
