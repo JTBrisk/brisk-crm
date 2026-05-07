@@ -103,43 +103,41 @@
 <body class="bg-background text-on-background min-h-screen">
 <!-- SideNavBar -->
 <aside class="docked fixed left-0 top-0 h-full w-sidebar_width flex flex-col h-full py-lg z-50" style="background-color: #41577E;">
-<div class="px-lg mb-xl">
+<div class="px-md mb-xl">
 <h1 class="font-headline-md text-headline-md text-surface-container-lowest">Brisk CRM</h1>
-<p class="text-surface-variant font-label-sm text-label-sm">Enterprise Edition</p>
+<p class="text-[10px] text-outline-variant tracking-wider uppercase">Enterprise Edition</p>
 </div>
-<nav class="flex-1 space-y-1">
-<div class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors">
-<span class="material-symbols-outlined">dashboard</span>
+<nav class="flex-1 space-y-xs">
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="./dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
 <span class="font-body-md text-body-md">Dashboard</span>
-</div>
-<div class="bg-surface-container-lowest text-primary font-bold rounded-l-full ml-4 py-3 px-6 cursor-pointer transition-all duration-200">
-<span class="flex items-center gap-md">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">contacts</span>
+</a>
+<a class="bg-surface-container-lowest text-primary font-bold rounded-l-full ml-4 py-3 px-6 flex items-center gap-md transition-all duration-200" href="./contacts.html">
+<span class="material-symbols-outlined" data-icon="contacts" style='font-variation-settings: "FILL" 1;'>contacts</span>
 <span class="font-body-md text-body-md">Contacts</span>
-</span>
-</div>
-<div class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors">
-<span class="material-symbols-outlined">handshake</span>
+</a>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="./deals.html">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
 <span class="font-body-md text-body-md">Deals</span>
-</div>
-<div class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors">
-<span class="material-symbols-outlined">task_alt</span>
+</a>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="./tasks.html">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
 <span class="font-body-md text-body-md">Tasks</span>
-</div>
-<div class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors">
-<span class="material-symbols-outlined">settings</span>
+</a>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
 <span class="font-body-md text-body-md">Settings</span>
-</div>
+</a>
 </nav>
-<div class="mt-auto border-t border-outline-variant/20 pt-lg">
-<div class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors">
-<span class="material-symbols-outlined">help</span>
+<div class="mt-auto pt-lg border-t border-white/10 mx-md">
+<a class="text-surface-variant hover:text-surface-bright py-3 px-4 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
 <span class="font-body-md text-body-md">Help</span>
-</div>
-<div class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors">
-<span class="material-symbols-outlined">logout</span>
+</a>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-4 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
 <span class="font-body-md text-body-md">Logout</span>
-</div>
+</a>
 </div>
 </aside>
 <!-- Main Layout -->

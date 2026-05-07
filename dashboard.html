@@ -112,45 +112,44 @@
 </head>
 <body class="bg-background text-on-background">
 <!-- Sidebar -->
-<nav class="docked fixed left-0 top-0 h-full w-sidebar_width dark:bg-surface-dim flex flex-col h-full py-lg z-50 bg-[#41577E]">
+<aside class="docked fixed left-0 top-0 h-full w-sidebar_width flex flex-col h-full py-lg z-50" style="background-color: #41577E;">
 <div class="px-md mb-xl">
 <h1 class="font-headline-md text-headline-md text-surface-container-lowest">Brisk CRM</h1>
-<p class="font-body-md text-body-md text-surface-variant opacity-70">Enterprise Edition</p>
+<p class="text-[10px] text-outline-variant tracking-wider uppercase">Enterprise Edition</p>
 </div>
-<div class="flex-grow flex flex-col">
-<!-- Dashboard (Active) -->
-<a class="bg-surface-container-lowest text-primary font-bold rounded-l-full ml-4 py-3 px-6 flex items-center gap-sm cursor-pointer transition-all duration-200" href="#">
-<span class="material-symbols-outlined">dashboard</span>
+<nav class="flex-1 space-y-xs">
+<a class="bg-surface-container-lowest text-primary font-bold rounded-l-full ml-4 py-3 px-6 flex items-center gap-md transition-all duration-200" href="./dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard" style='font-variation-settings: "FILL" 1;'>dashboard</span>
 <span class="font-body-md text-body-md">Dashboard</span>
 </a>
-<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors" href="#">
-<span class="material-symbols-outlined">contacts</span>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="./contacts.html">
+<span class="material-symbols-outlined" data-icon="contacts">contacts</span>
 <span class="font-body-md text-body-md">Contacts</span>
 </a>
-<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors" href="#">
-<span class="material-symbols-outlined">handshake</span>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="./deals.html">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
 <span class="font-body-md text-body-md">Deals</span>
 </a>
-<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors" href="#">
-<span class="material-symbols-outlined">task_alt</span>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="./tasks.html">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
 <span class="font-body-md text-body-md">Tasks</span>
 </a>
-<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200 hover:bg-on-secondary-fixed-variant/10 transition-colors" href="#">
-<span class="material-symbols-outlined">settings</span>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
 <span class="font-body-md text-body-md">Settings</span>
 </a>
-</div>
-<div class="mt-auto border-t border-white/10 pt-lg">
-<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200" href="#">
-<span class="material-symbols-outlined">help</span>
+</nav>
+<div class="mt-auto pt-lg border-t border-white/10 mx-md">
+<a class="text-surface-variant hover:text-surface-bright py-3 px-4 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
 <span class="font-body-md text-body-md">Help</span>
 </a>
-<a class="text-surface-variant hover:text-surface-bright py-3 px-10 flex items-center gap-md cursor-pointer transition-all duration-200" href="#">
-<span class="material-symbols-outlined">logout</span>
+<a class="text-surface-variant hover:text-surface-bright py-3 px-4 flex items-center gap-md hover:bg-on-secondary-fixed-variant/10 transition-colors cursor-pointer transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
 <span class="font-body-md text-body-md">Logout</span>
 </a>
 </div>
-</nav>
+</aside>
 <!-- Header / Top Bar -->
 <header class="docked full-width top-0 sticky z-40 bg-surface-container-lowest dark:bg-surface border-b border-outline-variant flex justify-between items-center h-16 px-md ml-sidebar_width">
 <div class="flex items-center gap-md">
