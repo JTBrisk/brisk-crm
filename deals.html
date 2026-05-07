@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deals Management - Nexus CRM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#001b3f",
+                    "secondary-container": "#dbe2f7",
+                    "on-error": "#ffffff",
+                    "tertiary": "#765a20",
+                    "outline-variant": "#c4c6cf",
+                    "tertiary-fixed": "#ffdea5",
+                    "surface-container-low": "#f4f3f6",
+                    "on-secondary-fixed": "#141c2a",
+                    "on-surface-variant": "#44474e",
+                    "secondary-fixed": "#dbe2f7",
+                    "outline": "#74777f",
+                    "on-tertiary-fixed-variant": "#5c4309",
+                    "error": "#ba1a1a",
+                    "on-background": "#1b1c1e",
+                    "surface-dim": "#dbd9dd",
+                    "surface-container-high": "#e9e7eb",
+                    "primary-fixed-dim": "#b1c7f4",
+                    "surface-container-highest": "#e3e2e5",
+                    "surface": "#faf9fc",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#261900",
+                    "inverse-primary": "#b1c7f4",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#5c6476",
+                    "tertiary-container": "#917236",
+                    "on-secondary-fixed-variant": "#3f4757",
+                    "surface-container": "#efedf0",
+                    "on-primary-container": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "background": "#faf9fc",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#31476d",
+                    "inverse-on-surface": "#f2f0f3",
+                    "primary-fixed": "#d7e2ff",
+                    "on-tertiary-container": "#ffffff",
+                    "primary": "#495e86",
+                    "tertiary-fixed-dim": "#e6c17d",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#6277a0",
+                    "surface-tint": "#495e86",
+                    "secondary-fixed-dim": "#bfc6da",
+                    "secondary": "#565e70",
+                    "on-surface": "#1b1c1e",
+                    "inverse-surface": "#2f3033",
+                    "surface-variant": "#e3e2e5",
+                    "surface-bright": "#faf9fc",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "sidebar_width": "240px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "table-header": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "table-header": ["13px", {"lineHeight": "18px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .sidebar-active { background-color: #ffffff; color: #495e86; font-weight: 700; border-radius: 9999px 0 0 9999px; margin-left: 1rem; padding: 0.75rem 1.5rem; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="docked fixed left-0 top-0 h-full w-sidebar_width dark:bg-surface-dim flex flex-col py-lg z-50" style="background-color: #41577E;">
+<div class="px-md mb-xl">
+<h1 class="font-headline-md text-headline-md text-surface-container-lowest">Nexus CRM</h1>
+<p class="text-label-sm font-label-sm text-surface-variant opacity-70">Enterprise Edition</p>
+</div>
+<nav class="flex-grow">
+<ul class="space-y-xs">
+<li><a class="hover:text-surface-bright py-3 px-10 flex items-center gap-md transition-all duration-200 cursor-pointer text-white/80" href="#"><span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>Dashboard</a></li>
+<li><a class="hover:text-surface-bright py-3 px-10 flex items-center gap-md transition-all duration-200 cursor-pointer text-white/80" href="#"><span class="material-symbols-outlined" data-icon="contacts">contacts</span>Contacts</a></li>
+<!-- Active Tab: Deals -->
+<li><a class="bg-surface-container-lowest text-primary font-bold rounded-l-full ml-4 py-3 px-6 flex items-center gap-md transition-all duration-200 cursor-pointer" href="#"><span class="material-symbols-outlined" data-icon="handshake" style="font-variation-settings: 'FILL' 1;">handshake</span>Deals</a></li>
+<li><a class="hover:text-surface-bright py-3 px-10 flex items-center gap-md transition-all duration-200 cursor-pointer text-white/80" href="#"><span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>Tasks</a></li>
+<li><a class="hover:text-surface-bright py-3 px-10 flex items-center gap-md transition-all duration-200 cursor-pointer text-white/80" href="#"><span class="material-symbols-outlined" data-icon="settings">settings</span>Settings</a></li>
+</ul>
+</nav>
+<div class="mt-auto px-md space-y-xs">
+<a class="hover:text-surface-bright py-3 px-10 flex items-center gap-md transition-all duration-200 cursor-pointer text-body-md font-body-md text-white/80" href="#"><span class="material-symbols-outlined" data-icon="help">help</span>Help</a>
+<a class="hover:text-surface-bright py-3 px-10 flex items-center gap-md transition-all duration-200 cursor-pointer text-body-md font-body-md text-white/80" href="#"><span class="material-symbols-outlined" data-icon="logout">logout</span>Logout</a>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="ml-sidebar_width min-h-screen flex flex-col">
+<!-- TopAppBar Shell -->
+<header class="docked full-width top-0 sticky z-40 bg-surface-container-lowest dark:bg-surface border-b border-outline-variant flex justify-between items-center h-16 px-md">
+<div class="flex items-center gap-md">
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</span>
+<input class="block w-64 pl-10 pr-3 py-2 border border-outline-variant rounded-lg bg-surface-container-low text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Search deals..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-container-low p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-container-low p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-secondary-container overflow-hidden">
+<img alt="User profile photo" class="h-full w-full object-cover" data-alt="A professional headshot of a corporate executive with a warm smile, set against a blurred modern office background. The lighting is soft and natural, emphasizing a trustworthy and professional persona. The overall aesthetic is clean and high-end, matching a sophisticated corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEuAka6mi1xilBDZdNu3X2rlSjmcozBtXmAPmS5iK9OTUJNlSR0jnOQpl9xtK5elouGf2ejax64QyyEpMXdOTPHhxfsD9vVS3XPxtMx_lR8ZA31j6k27kX3VyG2k1QEuHUIKcr0Rr1tDs9myyham4Q5FFpRLq_SwRiN789A0DdWqzVXOR2TD_KtR17n60OjFMMmz5cl-P4jm-JMGvIcJZ5WCBRcT9i247JudsBLrF4MwlXV0rPmOiGdP3cZX9w-XRGkTY7nOefOCOg"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-lg flex-grow overflow-x-hidden">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-xl gap-md">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-surface">Deals</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Manage your sales pipeline and track revenue opportunities.</p>
+</div>
+<div class="flex items-center gap-md">
+<!-- View Toggle -->
+<div class="inline-flex bg-surface-container rounded-lg p-1">
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-label-sm font-label-sm text-primary flex items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="view_kanban" style="font-variation-settings: 'FILL' 1;">view_kanban</span>
+                            Board
+                        </button>
+<button class="px-4 py-1.5 rounded-lg text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface flex items-center gap-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="list">list</span>
+                            List
+                        </button>
+</div>
+<!-- Primary Action -->
+<button class="bg-[#1a73e8] hover:bg-opacity-90 text-white px-lg py-sm rounded-xl font-label-sm text-label-sm flex items-center gap-sm transition-all shadow-md">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                        Add Deal
+                    </button>
+</div>
+</div>
+<!-- Dashboard Visual Element -->
+<!-- Kanban Board -->
+<div class="flex gap-lg overflow-x-auto pb-xl min-h-[600px] scrollbar-thin scrollbar-thumb-outline-variant scrollbar-track-transparent">
+<!-- Column: New -->
+<div class="flex-shrink-0 w-80">
+<div class="flex items-center justify-between px-xs mb-md">
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<h4 class="font-table-header text-table-header text-on-surface uppercase tracking-wider">New</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container rounded px-2">3</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]" data-icon="more_horiz">more_horiz</span></button>
+</div>
+<div class="space-y-md">
+<!-- Deal Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm hover:shadow-md hover:border-primary transition-all cursor-grab active:cursor-grabbing">
+<div class="flex justify-between items-start mb-sm">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Enterprise</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">4d ago</span>
+</div>
+<h5 class="font-headline-md text-body-md font-bold text-on-surface mb-xs">Acme Corp Expansion</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-md">Acme Industries Ltd.</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-md">
+<div class="text-primary font-bold text-body-md">$45,000</div>
+<div class="flex -space-x-2">
+<div class="h-6 w-6 rounded-full border-2 border-surface-container-lowest bg-surface-container-high overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="A professional and friendly female account manager with glasses, set against a clean, modern workspace with bright, balanced lighting. The aesthetic is corporate and high-end, using a neutral color palette with subtle hints of corporate blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBczI03yGiuphLkzZz0Hz5HOJdDnIuDlApGtgh18aII-0nOGlrV4CiJghDwHzdMaFBEmurD5lbNwlDRfXsxa6y73ZgXAfkV24ccw4A3_0HjHrEQUjw-7L-tx_YmxwLV1TEzFLe7sJJ4x6ChGq17B_n1EnTLupbheC5gXuGUY_wa0hKrZDXdfPjWg1wpx0SZtTGTHkc5I8eKr3t1v6qPMe8SmkxTywwKmGAa1i3Zk-5-Gi4W47MMyIWBBqvEjoYwlp7gvzrlzm4eJf4h"/>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm hover:shadow-md transition-all cursor-grab">
+<h5 class="font-headline-md text-body-md font-bold text-on-surface mb-xs">Cloud Infrastructure Migration</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-md">Stellar Systems</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-md">
+<div class="text-primary font-bold text-body-md">$128,000</div>
+<span class="material-symbols-outlined text-tertiary-container" data-icon="priority_high">priority_high</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Contacted -->
+<div class="flex-shrink-0 w-80">
+<div class="flex items-center justify-between px-xs mb-md">
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<h4 class="font-table-header text-table-header text-on-surface uppercase tracking-wider">Contacted</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container rounded px-2">2</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]" data-icon="more_horiz">more_horiz</span></button>
+</div>
+<div class="space-y-md">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm hover:shadow-md transition-all cursor-grab">
+<h5 class="font-headline-md text-body-md font-bold text-on-surface mb-xs">CRM Integration Project</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-md">Global Logistics</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-md">
+<div class="text-primary font-bold text-body-md">$12,500</div>
+<div class="flex items-center text-on-surface-variant text-[11px] gap-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="event">event</span>
+                                    May 12
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Qualified -->
+<div class="flex-shrink-0 w-80">
+<div class="flex items-center justify-between px-xs mb-md">
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-[#1a73e8]"></span>
+<h4 class="font-table-header text-table-header text-on-surface uppercase tracking-wider">Qualified</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container rounded px-2">1</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]" data-icon="more_horiz">more_horiz</span></button>
+</div>
+<div class="space-y-md">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm hover:shadow-md transition-all cursor-grab">
+<h5 class="font-headline-md text-body-md font-bold text-on-surface mb-xs">AI Consulting Framework</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-md">TechFlow Solutions</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-md">
+<div class="text-primary font-bold text-body-md">$89,000</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase">High Value</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Won -->
+<div class="flex-shrink-0 w-80">
+<div class="flex items-center justify-between px-xs mb-md">
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<h4 class="font-table-header text-table-header text-on-surface uppercase tracking-wider">Won</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container rounded px-2">0</span>
+</div>
+</div>
+<div class="border-2 border-dashed border-outline-variant rounded-xl h-24 flex items-center justify-center text-on-surface-variant text-label-sm font-label-sm italic opacity-50">
+                        Drag here to close won
+                    </div>
+</div>
+<!-- Column: Lost -->
+<div class="flex-shrink-0 w-80">
+<div class="flex items-center justify-between px-xs mb-md">
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<h4 class="font-table-header text-table-header text-on-surface uppercase tracking-wider">Lost</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container rounded px-2">0</span>
+</div>
+</div>
+</div>
+<!-- Column: On Hold -->
+<div class="flex-shrink-0 w-80">
+<div class="flex items-center justify-between px-xs mb-md">
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<h4 class="font-table-header text-table-header text-on-surface uppercase tracking-wider">On Hold</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container rounded px-2">0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- List View (Hidden by default structure, showing how it would look) -->
+<div class="hidden mt-xl bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low border-b border-outline-variant">
+<tr>
+<th class="px-lg py-md font-table-header text-table-header text-on-surface uppercase">Deal</th>
+<th class="px-lg py-md font-table-header text-table-header text-on-surface uppercase">Last Activity</th>
+<th class="px-lg py-md font-table-header text-table-header text-on-surface uppercase">Status</th>
+<th class="px-lg py-md font-table-header text-table-header text-on-surface uppercase text-right">Value</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-lowest/50 transition-colors">
+<td class="px-lg py-md">
+<div class="font-body-md font-bold text-on-surface">Deal 1</div>
+<div class="text-label-sm text-on-surface-variant">Acme Corp</div>
+</td>
+<td class="px-lg py-md text-body-md text-on-surface-variant font-body-md">Mon 4th May</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-primary-fixed text-on-primary-fixed-variant uppercase">New</span>
+</td>
+<td class="px-lg py-md text-right font-bold text-primary">$45,000</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/50 transition-colors">
+<td class="px-lg py-md">
+<div class="font-body-md font-bold text-on-surface">Deal 2</div>
+<div class="text-label-sm text-on-surface-variant">Global Logistics</div>
+</td>
+<td class="px-lg py-md text-body-md text-on-surface-variant font-body-md">Fri 1st May</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-secondary-fixed text-on-secondary-fixed-variant uppercase">Contacted</span>
+</td>
+<td class="px-lg py-md text-right font-bold text-primary">$12,500</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<!-- Floating Action Button - Supressed on this specialized view per rules -->
+</body></html>
