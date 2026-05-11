@@ -100,6 +100,11 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+              .filter-bg {
+         background-image: -webkit-linear-gradient(top, #fff, #eee);
+         background-image: -moz-linear-gradient(top, #fff, #eee);
+         background-image: linear-gradient(to bottom, #fff, #eee);
+      }
     </style>
 </head>
 <body class="bg-background text-on-surface min-h-screen">
@@ -188,7 +193,7 @@
 </div>
 </div>
 <!-- Filters & Search Bar (CRM Context) -->
-<div class="flex items-center justify-between bg-surface-container-lowest p-md _rounded-xl border border-outline-variant">
+<div class="flex items-center justify-between bg-surface-container-lowest p-md _rounded-xl border border-outline-variant filter-bg">
 <div class="flex gap-md">
 <button class="flex items-center gap-xs font-label-sm text-label-sm border border-outline-variant px-3 py-1.5 rounded hover:bg-surface-container-low transition-colors">
 <span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
@@ -303,22 +308,7 @@
 <p class="font-display-lg text-display-lg text-on-background">$86,700</p>
 </div>
 </div>
-<div class="bg-surface-container-low p-lg _rounded-xl border border-outline-variant flex items-center gap-md">
-<div class="p-3 rounded-full bg-tertiary-fixed text-tertiary">
-<span class="material-symbols-outlined" data-icon="timer">timer</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Avg. Deal Cycle</p>
-<p class="font-display-lg text-display-lg text-on-background">24 Days</p>
-</div>
-</div>
-<div class="relative overflow-hidden bg-primary-container text-on-primary-container p-lg _rounded-xl flex items-center gap-md border border-primary">
-<div class="z-10">
-<p class="font-label-sm text-label-sm opacity-80">Conversion Rate</p>
-<p class="font-display-lg text-display-lg">68%</p>
-</div>
-<img class="absolute right-0 top-0 h-full w-1/2 object-cover opacity-20 pointer-events-none" data-alt="A subtle background abstract pattern with flowing lines and data-inspired curves that convey growth and momentum in a professional CRM setting." src="https://lh3.googleusercontent.com/aida/ADBb0ugykrvytRqrm9Dbs0PhXLm03XJY22vtwnneXESPD8QSJVCp0VDpt-XHmgDikked8tUtMp904M6HhL8pZ5EIJawJEGTv7sBhBDHrhksv4ma8lJS2s69QPJSdmNF4l8LnQBuhNNSTWOti9i6rHqgt_xsHIVrksH95tKka90_Q0R7iyeCeVdqEteTLIo_tOdyNkiWwVnZ0kwQUrx_1uLRcKRd6zE9mzasQOHfTb16vus-ZHn43UEaXIdIXzlUlNBV8iVLYen0Zn4CO9BU"/>
-</div>
+
 </div>
 </div>
 </main>

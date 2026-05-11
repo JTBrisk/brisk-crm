@@ -108,6 +108,12 @@
             margin-left: 16px;
             padding: 12px 24px;
         }
+
+      .filter-bg {
+         background-image: -webkit-linear-gradient(top, #fff, #eee);
+         background-image: -moz-linear-gradient(top, #fff, #eee);
+         background-image: linear-gradient(to bottom, #fff, #eee);
+      }
     </style>
 </head>
 <body class="bg-background text-on-background">
@@ -171,7 +177,6 @@
 <span class="material-symbols-outlined">apps</span>
 </button>
 </div>
-<img alt="User avatar" class="w-8 h-8 rounded-full border border-outline-variant object-cover" data-alt="A professional business headshot of a middle-aged executive man with a kind smile, wearing a sharp navy blue suit and a white shirt. The background is a blurred office setting with soft, natural morning light filtering through large windows. The overall aesthetic is clean, corporate, and trustworthy, aligning with high-end enterprise software standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl7bz5-qzXj9EfJTmHfSK-2C2j-41iu8kWxtZI4WqYKggTZK3IMCsrbPUUHnX8TzFLoY5ju0K6_pt6PvufnwDAlooHV1hSBLmL74-gzx1IYuGpjg-mF9WSN6JtVtnv5vXEqFZF7ATJAxa18OaCq77xt59elRfM6Cj60aSWtkvk4tBEFe6tXlRRkCBpae3St3bDwji8ECdmaWNrjLzvqD46knuxEL4WOAh_wubj9WekBn_ZEyYsbBOQxCsYLrD6gD4he1w2AICwbxPG"/>
 </div>
 </header>
 <!-- Main Content -->
@@ -226,7 +231,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
 <!-- Pipeline Summary (Left/Main) -->
 <div class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant _rounded-xl overflow-hidden">
-<div class="p-md border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<div class="p-md border-b border-outline-variant bg-surface-container-low flex justify-between items-center  filter-bg">
 <h3 class="font-table-header text-table-header text-on-surface">Pipeline Summary</h3>
 <button class="text-primary font-label-sm text-label-sm hover:underline">View Pipeline</button>
 </div>
@@ -279,7 +284,7 @@
 </div>
 <!-- Follow-up Queue (Right Sidebar Content) -->
 <div class="lg:col-span-4 bg-surface-container-lowest border border-outline-variant _rounded-xl overflow-hidden flex flex-col">
-<div class="p-md border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<div class="p-md border-b border-outline-variant bg-surface-container-low flex justify-between items-center  filter-bg">
 <h3 class="font-table-header text-table-header text-on-surface uppercase tracking-tight">Follow-up Queue</h3>
 <span class="bg-error-container text-on-error-container text-[10px] px-2 py-0.5 rounded-full font-bold">URGENT</span>
 </div>
@@ -351,7 +356,7 @@
 </li>
 </ul>
 </div>
-<div class="p-md border-t border-outline-variant bg-surface-container-low text-center">
+<div class="p-md border-t border-outline-variant bg-surface-container-low text-center  filter-bg">
 <button class="text-primary font-label-sm text-label-sm">View All 18 Tasks</button>
 </div>
 </div>
@@ -359,7 +364,7 @@
 <!-- Bottom Row: Recent Activity -->
 <div class="mt-lg">
 <div class="bg-surface-container-lowest border border-outline-variant _rounded-xl overflow-hidden">
-<div class="p-md border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<div class="p-md border-b border-outline-variant bg-surface-container-low flex justify-between items-center  filter-bg">
 <h3 class="font-table-header text-table-header text-on-surface">Recent Won Deals</h3>
 <div class="flex gap-sm">
 <button class="p-1 hover:bg-surface-container-high rounded transition-colors">
@@ -381,7 +386,6 @@
 <tr class="hover:bg-surface-container-low transition-colors group">
 <td class="px-md py-4">
 <div class="flex items-center gap-sm">
-<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">N</div>
 <span class="font-body-md text-body-md text-on-surface">Novus Labs</span>
 </div>
 </td>
@@ -393,7 +397,6 @@
 <tr class="hover:bg-surface-container-low transition-colors group">
 <td class="px-md py-4">
 <div class="flex items-center gap-sm">
-<div class="w-8 h-8 rounded bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold">S</div>
 <span class="font-body-md text-body-md text-on-surface">Starlight Retail</span>
 </div>
 </td>

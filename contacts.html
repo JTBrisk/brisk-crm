@@ -14,6 +14,11 @@
             vertical-align: middle;
         }
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+              .filter-bg {
+         background-image: -webkit-linear-gradient(top, #fff, #eee);
+         background-image: -moz-linear-gradient(top, #fff, #eee);
+         background-image: linear-gradient(to bottom, #fff, #eee);
+      }
     </style>
 </head>
 <body class="bg-surface text-on-surface">
@@ -75,13 +80,6 @@
 <span class="material-symbols-outlined" data-icon="apps">apps</span>
 </button>
 </div>
-<div class="h-8 w-[1px] bg-outline-variant mx-sm"></div>
-<div class="flex items-center gap-sm cursor-pointer hover:bg-surface-container-low p-1 _rounded-lg transition-colors">
-<img alt="User avatar" class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0bnx3-yhkjuI037C7lK-7G3RXfv_esZj7ccLL861hoflJm5bmd2GFZTXUAXSYacYFjYd8ugb-cH6wQ-qo_P-WuulJ9_xH7yNdSopz0BsN9QAauORq6S2YJj1DJKuCNf3SUKxMhZjNwhawFYVIquTYuWEtCj1IPBw2JkDQEm5nuiR1TWNMCyKgTyhYV4RvnU_0-Zw0QeqTWRB4htU2EWSE2WHPw5sI-Y00ZK44gSdGR9IDI7hBpGqHu3UxSqWSWHlpI5CHiHgxaDb2"/>
-<div class="hidden lg:block text-left">
-<p class="font-label-sm text-label-sm text-on-surface leading-none">Alex Rivera</p>
-<p class="text-[10px] text-outline">Admin</p>
-</div>
 </div>
 </div>
 </header>
@@ -110,43 +108,11 @@
                     </button>
 </div>
 </section>
-<!-- Stats Bento Grid (High-end UI pattern) -->
-<!-- <section class="grid grid-cols-1 md:grid-cols-4 gap-md">
-<div class="bg-surface-container-lowest border border-outline-variant p-md _rounded-xl">
-<p class="font-label-sm text-label-sm text-outline mb-xs">Total Contacts</p>
-<div class="flex items-end justify-between">
-<span class="text-2xl font-bold text-on-surface">1,284</span>
-<span class="text-xs text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-semibold">+12%</span>
-</div>
-</div> -->
-<!-- <div class="bg-surface-container-lowest border border-outline-variant p-md _rounded-xl">
-<p class="font-label-sm text-label-sm text-outline mb-xs">Active Leads</p>
-<div class="flex items-end justify-between">
-<span class="text-2xl font-bold text-on-surface">432</span>
-<span class="text-xs text-tertiary-container text-on-tertiary px-2 py-0.5 rounded-full font-semibold">Hot</span>
-</div>
-</div> -->
-<!-- <div class="bg-surface-container-lowest border border-outline-variant p-md _rounded-xl">
-<p class="font-label-sm text-label-sm text-outline mb-xs">Conversion Rate</p>
-<div class="flex items-end justify-between">
-<span class="text-2xl font-bold text-on-surface">24.8%</span>
-<div class="w-16 h-1 bg-surface-container rounded-full overflow-hidden self-center">
-<div class="bg-primary w-2/3 h-full"></div>
-</div>
-</div>
-</div>
-<div class="bg-surface-container-lowest border border-outline-variant p-md _rounded-xl">
-<p class="font-label-sm text-label-sm text-outline mb-xs">Revenue Pipeline</p>
-<div class="flex items-end justify-between">
-<span class="text-2xl font-bold text-on-surface">$84.2k</span>
-<span class="material-symbols-outlined text-outline" data-icon="trending_up">trending_up</span>
-</div>
-</div> -->
 <!-- </section> -->
 <!-- Contacts Table Container -->
 <div class="bg-surface-container-lowest border border-outline-variant _rounded-xl overflow-hidden">
 <!-- Filters Bar -->
-<div class="px-md py-sm border-b border-outline-variant bg-surface-container-low flex items-center justify-between">
+<div class="px-md py-sm border-b border-outline-variant bg-surface-container-low flex items-center justify-between  filter-bg">
 <div class="flex items-center gap-md">
 <button class="flex items-center gap-xs font-label-sm text-label-sm text-on-surface-variant px-2 py-1 hover:bg-surface-container rounded">
 <span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
@@ -164,16 +130,17 @@
 <div class="overflow-x-auto">
 <table class="w-full text-left border-collapse">
 <thead>
-<tr class="bg-[#F2F2F2] border-b border-outline-variant">
+<tr class="border-b border-outline-variant" style="background-color: #808080;
+    color: #fff;">
 <th class="p-md w-12">
 <input class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
 </th>
-<th class="p-md font-table-header text-table-header text-[#888888] uppercase tracking-wider">Name</th>
-<th class="p-md font-table-header text-table-header text-[#888888] uppercase tracking-wider">Company</th>
-<th class="p-md font-table-header text-table-header text-[#888888] uppercase tracking-wider">Email</th>
-<th class="p-md font-table-header text-table-header text-[#888888] uppercase tracking-wider">Status</th>
-<th class="p-md font-table-header text-table-header text-[#888888] uppercase tracking-wider">Last Activity</th>
-<th class="p-md font-table-header text-table-header text-[#888888] uppercase tracking-wider text-right">Actions</th>
+<th class="p-md font-table-header text-table-header uppercase tracking-wider">Name</th>
+<th class="p-md font-table-header text-table-header uppercase tracking-wider">Company</th>
+<th class="p-md font-table-header text-table-header uppercase tracking-wider">Email</th>
+<th class="p-md font-table-header text-table-header uppercase tracking-wider">Status</th>
+<th class="p-md font-table-header text-table-header uppercase tracking-wider">Last Activity</th>
+<th class="p-md font-table-header text-table-header uppercase tracking-wider text-right">Actions</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-outline-variant">
@@ -184,7 +151,7 @@
 </td>
 <td class="p-md">
 <div class="flex items-center gap-md">
-<img alt="Sarah Rodriguez" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATvBbffkGKa3OpXW0-jMtm8KyaqiMiCaoeRlkoLiU0aHLuoDeEM_6a8CwsiuN8Q1a59RbXwPYUMjKyPI3eHOGT5FyifFieqYEI6dNOQoQkcdZVyLm5a0OBGa6FkGwKGr4lR7KvN1SFCC_AjtbQT4If6NXy0xInhR8TVYpVgIRK8onFd_czn-dh9tI_AfU6cXN-FomKeEmlp5eralVIQ9ytOoENbnjIPyi3PUdalQx6Sg055h5G_PH-uj9FHL2g_jvOOIvcp4snCk_s"/>
+
 <div>
 <p class="font-body-md text-body-md font-semibold text-on-surface">Sarah Rodriguez</p>
 <p class="text-[12px] text-outline">Lead Architect</p>
@@ -215,7 +182,6 @@
 </td>
 <td class="p-md">
 <div class="flex items-center gap-md">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-xs text-on-secondary-fixed">MB</div>
 <div>
 <p class="font-body-md text-body-md font-semibold text-on-surface">Marcus Bennett</p>
 <p class="text-[12px] text-outline">CTO</p>
@@ -245,9 +211,6 @@
 <input class="rounded border-outline-variant text-primary focus:ring-primary" onclick="event.stopPropagation()" type="checkbox"/>
 </td>
 <td class="p-md">
-<div class="flex items-center gap-md">
-<img alt="Elena List" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlYmRCDuvjS9-buGlKckxcPUMIpn7qEdpa9ONgidtlNba7FCYnuPkt3XSDfy0xwkdjZbCci_0VFS7Is8RIEtvDzGH9lzZhyUanhHBg4Y0C7uL_NXwyt1vYjjJyxnhrkiiLHPV45xA2Q5-Knl4NxXfQ0P1fJH7DB0ZWXA-A5vPPRUIE_vbR7enZ_Tf6_pf3t-64-9NfDHDHvVuDPmkeY7kbb6xYv53u6k08KeKQp_KEoMfulHyUB_bs-L-yrYxjP01Jp_s0LMn7JwUR"/>
-<div>
 <p class="font-body-md text-body-md font-semibold text-on-surface">Elena List</p>
 <p class="text-[12px] text-outline">Procurement Manager</p>
 </div>
@@ -277,7 +240,6 @@
 </td>
 <td class="p-md">
 <div class="flex items-center gap-md">
-<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-xs text-on-tertiary-fixed">JC</div>
 <div>
 <p class="font-body-md text-body-md font-semibold text-on-surface">Julian Chen</p>
 <p class="text-[12px] text-outline">Director of Sales</p>
@@ -308,7 +270,7 @@
 </td>
 <td class="p-md">
 <div class="flex items-center gap-md">
-<img alt="Anita Meyer" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfy5wy6f_q0MjHcQQ8ixW2RA5pExVNQFacPhWxK9ciQdp5NYUE4bE_7LGX1OGhNSxIZAVxDY-wgba85PrXUEb6TS1p6rK5A4d-sp-yE9ylP839m0ij6eTy0m8MYvsRtjhliPjcCIGieqi-UElM5B5wn4FBXA_Mvb8iXoExbxFiNkgfoHMaaQiAHQ0JWFnyqvqDWsqNn5YJ64HzcEllykTZnADopYl98DITteLz6Qt6ERplWpype5rzEK7boNugA3LZYIQec9y82siT"/>
+
 <div>
 <p class="font-body-md text-body-md font-semibold text-on-surface">Anita Meyer</p>
 <p class="text-[12px] text-outline">Marketing Head</p>
@@ -396,7 +358,6 @@
 <p class="font-label-sm text-label-sm text-outline mb-xs">Total Contacts</p>
 <div class="flex items-end justify-between">
 <span class="text-2xl font-bold text-on-surface">1,284</span>
-<span class="text-xs text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-semibold">+12%</span>
 </div>
 </div>
 </section>

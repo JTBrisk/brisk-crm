@@ -99,6 +99,11 @@
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: #faf9fc;
         }
+              .filter-bg {
+         background-image: -webkit-linear-gradient(top, #fff, #eee);
+         background-image: -moz-linear-gradient(top, #fff, #eee);
+         background-image: linear-gradient(to bottom, #fff, #eee);
+      }
     </style>
 </head>
 <body class="text-on-surface">
@@ -150,6 +155,10 @@
 </div>
 </div>
 <div class="flex items-center gap-lg">
+   <button class="bg-[#1a73e8] text-white px-md py-2 _rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                Add Task
+            </button>
 <div class="flex items-center gap-sm">
 <button class="p-2 hover:bg-surface-container-low transition-colors rounded-full text-on-surface-variant relative">
 <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
@@ -159,11 +168,6 @@
 <span class="material-symbols-outlined" data-icon="apps">apps</span>
 </button>
 </div>
-<button class="bg-[#1a73e8] text-white px-md py-2 _rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity flex items-center gap-xs">
-<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
-                Add Task
-            </button>
-<img alt="User profile photo" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2eEDkyR0nd_-7VqxZ3rAjANYO3abJv0bIGAu8giZctOxzWK8TK0Iat3z1yUlN49T7pz7auDbOVTCrMU1lT3-4J3RkU4AQcZ6IwIFiN3tCpyAA-1H1bSvzJlmwvgMdY6F18Rxnfo747N1Qa11z9FKVJR6LL0CXqw-QHwEvmDeyBxYybsgA5efWgWZaQiD-Vzg6jHjGtsCqU_ZXoNR9uQyQiaMYso7wkQC2IBy19v9btGonVGXT9kWpY2mA_V6BBW7rKzHAqoWGnkcG">
 </div>
 </header>
 <!-- Main Workspace -->
@@ -193,10 +197,7 @@
 <div>
 <h4 class="font-table-header text-table-header text-on-surface">Email Sent</h4>
 <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Follow-up on initial inquiry sent to Sarah Jenkins.</p>
-<div class="mt-sm inline-flex items-center gap-xs px-sm py-xs bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">
-<span class="material-symbols-outlined text-[12px]" data-icon="corporate_fare">corporate_fare</span>
-                                        Website Redesign
-                                    </div>
+
 </div>
 <span class="text-label-sm font-label-sm text-outline">10:45 AM</span>
 </div>
@@ -210,10 +211,7 @@
 <div>
 <h4 class="font-table-header text-table-header text-on-surface">Note Added</h4>
 <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Customer requested a detailed breakdown of cloud storage tiers.</p>
-<div class="mt-sm inline-flex items-center gap-xs px-sm py-xs bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">
-<span class="material-symbols-outlined text-[12px]" data-icon="cloud">cloud</span>
-                                        Cloud Migration
-                                    </div>
+
 </div>
 <span class="text-label-sm font-label-sm text-outline">09:15 AM</span>
 </div>
@@ -227,10 +225,7 @@
 <div>
 <h4 class="font-table-header text-table-header text-on-surface">Proposal Sent</h4>
 <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Draft v2 of the service agreement delivered for review.</p>
-<div class="mt-sm inline-flex items-center gap-xs px-sm py-xs bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">
-<span class="material-symbols-outlined text-[12px]" data-icon="architecture">architecture</span>
-                                        Infrastructure Upgrade
-                                    </div>
+
 </div>
 <span class="text-label-sm font-label-sm text-outline">Yesterday</span>
 </div>
@@ -244,17 +239,14 @@
 <div>
 <h4 class="font-table-header text-table-header text-on-surface">Meeting Scheduled</h4>
 <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Discovery call with the executive board regarding expansion.</p>
-<div class="mt-sm inline-flex items-center gap-xs px-sm py-xs bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">
-<span class="material-symbols-outlined text-[12px]" data-icon="public">public</span>
-                                        Global Expansion Phase 1
-                                    </div>
+
 </div>
 <span class="text-label-sm font-label-sm text-outline">Yesterday</span>
 </div>
 </div>
 </div>
 </div>
-<div class="bg-surface-container-low p-md border-t border-outline-variant text-center">
+<div class="bg-surface-container-low p-md border-t border-outline-variant text-center  filter-bg">
 <button class="text-primary font-label-sm text-label-sm hover:underline">View All History</button>
 </div>
 </div>
